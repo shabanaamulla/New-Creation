@@ -1,0 +1,69 @@
+
+
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+pm.test("Department", function () {
+    pm.expect(pm.response.text()).to.include("Management");
+});
+var jsonObject = xml2Json(responseBody);
+pm.test("Employee Name", function () {
+    pm.expect(pm.response.text()).to.include("Isabel Britt");
+});
+pm.test("Salary", function () {
+    pm.expect(pm.response.text()).to.include("$50,000.00");
+pm.test("Address", function () {
+    pm.expect(pm.response.text()).to.include("34.833850°, 106.748580°");
+pm.test("Work Location", function () {
+    pm.expect(pm.response.text()).to.include("Headquarters");
+pm.test("Is the employee still active", function () {
+    pm.expect(pm.response.text()).to.include("Yes");
+pm.test("Length", function () {
+    pm.expect(pm.response.text()).to.include("47in");
+    pm.test("Width", function () {
+        pm.expect(pm.response.text()).to.include("21in");
+pm.test("Car Details", function () {
+    pm.expect(pm.response.text()).to.include("Ford");
+pm.test("Car Details", function () {
+pm.test("Body matches string", function () {
+    pm.expect(pm.response.text()).to.include("string_you_want_to_search");
+});
+    pm.expect(pm.response.text()).to.include("Ford");
+pm.test("Model", function () {
+    pm.expect(pm.response.text()).to.include("Taurus");
+});
+});
+    pm.test("Model", function () {
+        pm.expect(pm.response.text()).to.include("F150");
+    });
+    pm.test("Model Year", function () {
+        pm.expect(pm.response.text()).to.include("2015");
+    });
+    pm.test("Model Year", function () {
+        pm.expect(pm.response.text()).to.include("2015");
+    });
+});
+        pm.test("Trim", function () {
+            pm.expect(pm.response.text()).to.include("SEL");
+        });
+    });
+});
+    pm.test("Trim", function () {
+        pm.expect(pm.response.text()).to.include("XLT");
+    });
+    pm.test("Colour", function () {
+        pm.expect(pm.response.text()).to.include("Black");
+    });
+});
+    pm.test("Colour", function () {
+        pm.expect(pm.response.text()).to.include("Red");
+    });
+});
+    pm.test("License Plate", function () {
+        pm.expect(pm.response.text()).to.include("TEST-0001");
+    });
+    pm.test("License Plate", function () {
+        pm.expect(pm.response.text()).to.include("Test-0002");
+    });
+});
+});
