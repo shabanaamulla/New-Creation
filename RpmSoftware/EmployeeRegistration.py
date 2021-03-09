@@ -7,6 +7,7 @@ import time
 driver = selenium.webdriver.Chrome(executable_path="C:\\Users\\Shabana\\Driver\\chromedriver.exe")
 driver.get("https://rpmsoftware.com/hiring/2020/integration-test/form-edit.html")
 driver.maximize_window()
+#driver.find_element(By.ID)
 driver.find_element_by_id("FL:_ctl0:_ctl3").send_keys("Isabel Britt")
 driver.find_element_by_id("FL:_ctl1:_ctl4").send_keys("This is a test Employee Summary.")
 def select_values (element, value):
